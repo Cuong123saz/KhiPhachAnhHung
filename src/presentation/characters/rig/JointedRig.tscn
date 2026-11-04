@@ -1,0 +1,94 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://src/presentation/characters/rig/jointed_rig.gd" id="1_54fdn"]
+[ext_resource type="Script" path="res://src/presentation/ink/ink_shapes.gd" id="2_lado1"]
+[ext_resource type="AnimationLibrary" path="res://src/presentation/characters/rig/rig_animations.tres" id="3_m352t"]
+
+[node name="JointedRig" type="Node2D" unique_id=626571594]
+script = ExtResource("1_54fdn")
+
+[node name="Flip" type="Node2D" parent="." unique_id=2092343438]
+
+[node name="GroundRing" type="Node2D" parent="Flip" unique_id=2061179527]
+visible = false
+position = Vector2(12, 0)
+script = ExtResource("2_lado1")
+
+[node name="WaterRise" type="Node2D" parent="Flip" unique_id=1311655933]
+visible = false
+position = Vector2(12, 0)
+script = ExtResource("2_lado1")
+
+[node name="Hips" type="Node2D" parent="Flip" unique_id=1701801915]
+position = Vector2(0, -22)
+
+[node name="ThighFar" type="Node2D" parent="Flip/Hips" unique_id=2097290341]
+position = Vector2(0, 1)
+
+[node name="ShinFar" type="Node2D" parent="Flip/Hips/ThighFar" unique_id=793720110]
+position = Vector2(0, 10)
+
+[node name="FootFar" type="Node2D" parent="Flip/Hips/ThighFar/ShinFar" unique_id=1648601560]
+position = Vector2(0, 9)
+
+[node name="ThighNear" type="Node2D" parent="Flip/Hips" unique_id=1786343722]
+position = Vector2(0, 1)
+
+[node name="ShinNear" type="Node2D" parent="Flip/Hips/ThighNear" unique_id=336840583]
+position = Vector2(0, 10)
+
+[node name="FootNear" type="Node2D" parent="Flip/Hips/ThighNear/ShinNear" unique_id=1855734048]
+position = Vector2(0, 9)
+
+[node name="Skirt" type="Node2D" parent="Flip/Hips" unique_id=1608900883]
+position = Vector2(0, 2)
+
+[node name="Chest" type="Node2D" parent="Flip/Hips" unique_id=1282122091]
+position = Vector2(0, -1)
+
+[node name="ArmFar" type="Node2D" parent="Flip/Hips/Chest" unique_id=1892161677]
+
+[node name="ForeFar" type="Node2D" parent="Flip/Hips/Chest/ArmFar" unique_id=879726759]
+position = Vector2(0, 8)
+
+[node name="HandFar" type="Node2D" parent="Flip/Hips/Chest/ArmFar/ForeFar" unique_id=90948650]
+position = Vector2(0, 8)
+
+[node name="ArmNear" type="Node2D" parent="Flip/Hips/Chest" unique_id=444149510]
+
+[node name="ForeNear" type="Node2D" parent="Flip/Hips/Chest/ArmNear" unique_id=1006931156]
+position = Vector2(0, 8)
+
+[node name="HandNear" type="Node2D" parent="Flip/Hips/Chest/ArmNear/ForeNear" unique_id=620575689]
+position = Vector2(0, 8)
+
+[node name="Weapon" type="Node2D" parent="Flip/Hips/Chest/ArmNear/ForeNear/HandNear" unique_id=1086105049]
+show_behind_parent = true
+
+[node name="Glow" type="Node2D" parent="Flip/Hips/Chest/ArmNear/ForeNear/HandNear/Weapon" unique_id=1362094389]
+visible = false
+position = Vector2(0, -30)
+script = ExtResource("2_lado1")
+
+[node name="SpinDisc" type="Node2D" parent="Flip/Hips/Chest/ArmNear/ForeNear/HandNear" unique_id=1292203525]
+visible = false
+script = ExtResource("2_lado1")
+
+[node name="Head" type="Node2D" parent="Flip/Hips/Chest" unique_id=725343028]
+position = Vector2(0, -16.5)
+
+[node name="Tail" type="Node2D" parent="Flip/Hips/Chest/Head" unique_id=93253871]
+
+[node name="SwingArc" type="Node2D" parent="Flip/Hips/Chest" unique_id=109357358]
+visible = false
+position = Vector2(4, -12)
+script = ExtResource("2_lado1")
+
+[node name="Cape" type="Node2D" parent="Flip/Hips" unique_id=756176291]
+position = Vector2(0, -15)
+
+[node name="Base" type="AnimationPlayer" parent="." unique_id=305687156]
+libraries/ = ExtResource("3_m352t")
+
+[node name="Action" type="AnimationPlayer" parent="." unique_id=1435978594]
+libraries/ = ExtResource("3_m352t")

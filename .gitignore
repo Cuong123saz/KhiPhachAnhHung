@@ -1,0 +1,5 @@
+# Godot cache and local builds; never commit these.
+.godot/
+export/
+*.translation
+tests/results/
